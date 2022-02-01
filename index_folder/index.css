@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+body{
+    font-size: 1.125rem;
+}
+
+.home-div{
+    width:100%;
+    min-height:100vh;
+    background: radial-gradient(#4d4d4d,  #000);
+}
+
+.open-btn{
+    position:absolute;
+    top:70%;
+    left: 38%;
+    width:20%;
+    height:10%;
+    padding: 10px 30px;
+    margin: 0 15px;
+    color: #21ebff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: 0.5s;
+    overflow: hidden;
+    background:transparent;
+    border:none;
+    cursor: pointer;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0003);
+    z-index: 1;
+}
+
+.open-btn:before{
+    content: " ";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #21ebff;
+    border-left: 2px solid #21ebff;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+
+}
+
+.open-btn:hover{
+   background: #21ebff;
+   color: #111;
+   box-shadow: 0 0 50px #21ebff; 
+   transition-delay: 0.5s;
+}
+
+.open-btn:hover:before{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+
+}
+
+.open-btn:after{
+    content: " ";
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #21ebff;
+    border-right: 2px solid #21ebff;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.open-btn:hover:after{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+
+.year-div{
+    position: absolute;
+    width:50%;
+    height:40%;
+    top:30%;
+    left:31%;
+    display: flex;
+    transform-style: preserve-3d;
+    gap: 10px;
+    transform: rotateY(30deg) rotateX(10deg);
+}
+
+.year-div .year-text{
+    position: relative;
+    width:100px;
+    height:100px;
+    transform-style: preserve-3d;
+    transition: 7s ease-in-out;
+    transition-delay: calc(0.25s * var(--j));
+}
+
+.year-div .year-text::before{
+    content: "";
+    position: absolute;
+    width:100%;
+    height:100%;
+    background:#373737;
+    transform-origin: left;
+    transform: rotateY(90deg) translateX(-50px);
+}
+
+.year-div .year-text:last-child::before{
+    background: #29ab3c;
+}
+
+.year-div .year-text:last-child span{
+    background: linear-gradient(#29c040, #32ed4e);
+    color: #333;
+}
+
+.year-div .year-text span{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(#434343,#535353);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:4em;
+    color:#fff;
+    transform-style: preserve-3d;
+    transform: rotatex(calc(90deg * var(--i))) translateZ(50px);
+}
+
+.notification-div{
+    position: absolute;
+    top:3%;
+    right:2%;
+    width:4%;
+    height:40px;
+    border: 2px solid #3b3a3c;
+    background: #3b3a3c;
+    border-radius: 50%;
+    opacity: 0.1;
+    cursor: none;
+}
+
+.notification-div .bell-img{
+    position: absolute;
+    top:15%;
+    left:24%;
+    width:50%;
+    height:70%;
+}
+
+.notification-div .notif-div{
+    position: absolute;
+    top:10%;
+    right:15%;
+    width:30%;
+    height:35%;
+    border-radius: 50%;
+    background: red;
+    color:white;
+    text-align:center;
+    font-size: 0.5rem;
+    font-weight: bold;
+    line-height: 13px;
+    display: none;
+}
+
+/* medias */
+
+/* Mobile: 576px
+tablet : 768px;
+laptop: 992px;
+desktop: 1200px; */
+
+/* Mobile */
+@media (max-width: 576px){
+    /* HOME PAGE */
+    .open-btn{
+        top:70%;
+        left:28%;
+        width: 40%;
+        height: 10%;
+    }
+
+    .year-div{
+        width:80%;
+        height:40%;
+        top:40%;
+        left:10%;
+    }
+
+    .year-div .year-text::before{
+        width:150%;
+        height:100%;
+    }
+
+    .notification-div{
+        width:15%;
+        height:40px;
+    }
+    
+    .notification-div .bell-img{
+        position: absolute;
+        top:15%;
+        left:24%;
+        width:50%;
+        height:70%;
+    }
+    
+}
