@@ -1,3 +1,5 @@
+console.log(window.innerWidth)
+console.log(window.innerHeight)
 // HOME - PAGE
 const open_btn = document.querySelector('.open-btn')
 
@@ -50,4 +52,13 @@ notification_div.addEventListener('click', () =>{
 f_r_accept_btn.addEventListener('click', () =>{
     f_r_accept_div.style.top = "2%"
     f_r_div.style.display = "none"
+    
+    let i = 1;
+    let f_r_accept_div_popping = setInterval(()=>{
+        if(i == 4){
+            clearInterval(f_r_accept_div_popping)
+            f_r_accept_div.style.top = "-20%"
+        }
+        i++;
+    },1000)
 })

@@ -217,6 +217,7 @@ body{
     width:35%;
     height:15%;
     top:-20%;
+    /* top:2%; */
     left:30%;
     background: url('../imgs/f_r_accept.jpg');
     background-size: 100% 100%;
@@ -270,6 +271,12 @@ desktop: 1200px; */
     .friend-request-div{
         width:80%;
         height:23%;
+    }
+
+    .f-r-accept-div{
+        width:90%;
+        height:12%;
+        left:5%;
     }
   
 }
