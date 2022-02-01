@@ -17,7 +17,7 @@ body{
 
 .open-btn{
     position:absolute;
-    top:70%;
+    top:80%;
     left: 38%;
     width:20%;
     height:10%;
@@ -88,7 +88,7 @@ body{
     position: absolute;
     width:50%;
     height:40%;
-    top:30%;
+    top:40%;
     left:31%;
     display: flex;
     transform-style: preserve-3d;
@@ -150,7 +150,7 @@ body{
     background: #3b3a3c;
     border-radius: 50%;
     opacity: 0.1;
-    cursor: none;
+    pointer-events: none;
 }
 
 .notification-div .bell-img{
@@ -175,6 +175,54 @@ body{
     font-weight: bold;
     line-height: 13px;
     display: none;
+}
+
+.friend-request-div{
+    position:absolute;
+    background: #242526;
+    top:9%;
+    right:2%;
+    width:20%;
+    height:20%;
+    /* border:1px solid white; */
+    border-radius: 5px;
+    display:none;
+}
+
+.friend-request-div .f-r-img{
+    position: absolute;
+    width:100%;
+    height:100px;
+}
+
+.friend-request-div .btn-primary,
+.friend-request-div .btn-secondary{
+    position: absolute;
+    bottom:5%;
+    width:35%;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.friend-request-div .btn-primary{
+    left:13.5%;
+}
+
+.friend-request-div .btn-secondary{
+    right:13.5%;
+}
+
+.f-r-accept-div{
+    position: absolute;
+    width:35%;
+    height:15%;
+    top:-20%;
+    left:30%;
+    background: url('../imgs/f_r_accept.jpg');
+    background-size: 100% 100%;
+    background-position: center center;
+    border-radius: 20px;
+    transition:2s;
 }
 
 /* medias */
@@ -218,5 +266,10 @@ desktop: 1200px; */
         width:50%;
         height:70%;
     }
-    
+
+    .friend-request-div{
+        width:80%;
+        height:23%;
+    }
+  
 }
