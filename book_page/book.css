@@ -33,6 +33,7 @@ body{
     /* border:1px solid white; */
     /* visibility: hidden; */
     /* transition: 0.5s; */
+    display:none;
 }
 
 .book-section .book-div{
@@ -59,6 +60,7 @@ body{
     transform-origin: left;
     background: url('../imgs/side.jpg');
     background-position: center;
+    background-size: 100% 100%;
     transform : rotateY(90deg);
 }
 
@@ -69,6 +71,7 @@ body{
     height:100%;
     transform-origin: center;
     background: url('../imgs/back.jpg');
+    background-size: 100% 100%;
     background-position: center;
     transform : rotateY(180deg) translateZ(60px);
 }
@@ -139,7 +142,7 @@ body{
     align-items: center;
     background: #333;
     color: rgba(255,255,255,0.2);
-    font-size: 30px !important;
+    font-size: 1.5em;
     transition: 0.2s;
     cursor: default;
 }
@@ -150,8 +153,7 @@ body{
     position:absolute;
     top:17%;
     width:100%;
-    height:30%;
-    /* border:1px solid white; */
+    height:10%;
 }
 
 .book-cover-div .it-word ul{
@@ -352,7 +354,8 @@ body{
     display:flex;
     justify-content:center;
     align-items: center;
-    visibility: hidden;
+    /* visibility: hidden; */
+    /* display:none; */
 }
 .pages-book-div{
     position:relative;
@@ -385,7 +388,7 @@ body{
 .pages-book-div .paper .front{
     z-index: 1;
     backface-visibility: hidden;
-    /* border-left: 3px solid powderblue; */
+    border-left: 3px solid powderblue;
 }
 
 .pages-book-div .paper .back{
@@ -457,19 +460,35 @@ body{
 @media (max-width: 576px){
     .book-section{
         top:20%;
-        left:10%;
-        width:90%;
-        height:70%;
+        left:30%;
+        width:40%;
+        height:30%;
+    }
+
+    .book-section .book-div:before{
+        width:16%;
+        height:100%;
+    }
+    
+    .book-section .book-div:after{
+        width:100%;
+        height:100%;
+        transform : rotateY(180deg) translateZ(25px);
     }
 
     .book-cover-div ul li{
-        width:35px;
-        height:35px;
+        width:15px;
+        height:10px;
         margin: 0 3px; 
+    }
+
+    .book-cover-div ul li span{
+        font-size: 0.7em;
     }
 
     .book-cover-div .it-word{
         top:17%;
+        left:-5%;
     }
     
     .book-cover-div .it-word ul{
@@ -478,6 +497,7 @@ body{
 
     .book-cover-div .ends-word{
         top:32%;
+        left:-5%;
     }
     
     .book-cover-div .ends-word ul{
@@ -486,6 +506,7 @@ body{
 
     .book-cover-div .with-word{
         top:43%;
+        left:-5%;
     }
     
     .book-cover-div .with-word ul{
@@ -494,9 +515,13 @@ body{
 
     .book-cover-div .us-word{
         top:51%;
+        left:-5%;
     }
     
     .book-cover-div .us-word ul{
         left:45%;
     }
+
+    /* BOOK PAGES */
+    /* 362 saka 363 */
 }
