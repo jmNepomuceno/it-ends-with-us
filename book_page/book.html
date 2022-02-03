@@ -12,15 +12,18 @@
         crossorigin="anonymous"
     >
 
+    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 <body>
     
     <div class="book-page-div">
-        <section class="book-section">
+
+        <!-- <section class="book-section">
 
             <div class="book-div">
-                <!-- FRONT COVER -->
+                
                 <div class="book-cover-div">
 
                     <div class="it-word">
@@ -206,8 +209,69 @@
         
                 </div>
             </div>
-        </section>
+        </section> -->
 
+        <!-- BOOK PAGES -->
+        <div class="pages-div" >
+            <button class="prev-btn">
+                <i class="fas fa-arrow-circle-left"></i>
+            </button>
+        
+
+            <div class="pages-book-div">
+
+                <!-- PAPER 1 -->
+                <div class="paper" id="page-1">
+                    <div class="front" id="p1-front">
+                        <div class="front-content" id="p1-front-content">
+                            <h1>Front 1</h1>
+                        </div>
+                    </div>
+
+                    <div class="back" id="p1-back">
+                        <div class="back-content" id="p1-back-content">
+                            <h1>Back 1</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAPER 2 -->
+                <div class="paper" id="page-2">
+                    <div class="front" id="p2-front">
+                        <div class="front-content" id="p2-front-content">
+                            <h1>Front 2</h1>
+                        </div>
+                    </div>
+
+                    <div class="back" id="p2-back">
+                        <div class="back-content" id="p2-back-content">
+                            <h1>Back 2</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAPER 3 -->
+                <div class="paper" id="page-3">
+                    <div class="front" id="p3-front">
+                        <div class="front-content" id="p3-front-content">
+                            <h1>Front 3</h1>
+                        </div>
+                    </div>
+
+                    <div class="back" id="p3-back">
+                        <div class="back-content" id="p3-back-content">
+                            <h1>Back 3</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="next-btn">
+                <i class="fas fa-arrow-circle-right"></i>
+            </button>
+
+        </div>
     </div>
     
     <script type="text/javascript" src="./book.js"></script>
