@@ -21,8 +21,8 @@ body{
 
 .book-section{
     position:absolute;
-    top:20%;
-    left:40%;
+    top:12%;
+    left:38%;
     width:26%;
     height:70%;
     display: flex;
@@ -33,7 +33,7 @@ body{
     /* border:1px solid white; */
     /* visibility: hidden; */
     /* transition: 0.5s; */
-    display:none;
+    /* display:none; */
 }
 
 .book-section .book-div{
@@ -349,22 +349,22 @@ body{
 /* BOOK PAGES */
 .pages-div{
     position:absolute;
-    top:18%;
-    left:33%;
+    top:10%;
+    left:30%;
     display:flex;
     justify-content:center;
     align-items: center;
-    /* visibility: hidden; */
+    visibility: hidden;
     /* display:none; */
 }
-.pages-book-div{
+.pages-div .pages-book-div{
     position:relative;
     width:400px;
     height:570px;
     transition: transform 0.5s;
 }
 
-.pages-book-div .paper{
+.pages-div .pages-book-div .paper{
     position: absolute;
     width:100%;
     height:100%;
@@ -373,8 +373,8 @@ body{
     perspective:1500px;
 }
 
-.pages-book-div .paper .front, 
-.pages-book-div .paper .back{
+.pages-div .pages-book-div .paper .front, 
+.pages-div .pages-book-div .paper .back{
     background: white;
     position: absolute;
     width:100%;
@@ -385,18 +385,18 @@ body{
     transition: 0.5s;
 }
 
-.pages-book-div .paper .front{
+.pages-div .pages-book-div .paper .front{
     z-index: 1;
     backface-visibility: hidden;
     border-left: 3px solid powderblue;
 }
 
-.pages-book-div .paper .back{
+.pages-div .pages-book-div .paper .back{
     z-index: 0;
 }
 
-.front-content,
-.back-content{
+.pages-div .pages-book-div .front-content,
+.pages-div .pages-book-div .back-content{
     width:100%;
     height:100%;
     display: flex;
@@ -404,34 +404,34 @@ body{
     align-items: center;
 }
 
-.back-content{
+.pages-div .pages-book-div .back-content{
     transform: rotateY(180deg);
 }
 
 /* paper stack order */
 
-#page-1{
+.pages-div .pages-book-div #page-1{
     z-index: 3;
 }
 
-#page-2{
+.pages-div .pages-book-div #page-2{
     z-index: 2;
 }
 
-#page-3{
+.pages-div .pages-book-div #page-3{
     z-index: 1;
 }
 
 /* paper flipped */
-.flipped .front,
-.flipped .back{
+.pages-div .pages-book-div .flipped .front,
+.pages-div .pages-book-div .flipped .back{
     transform: rotateY(-180deg);
 }
 
 /* buttons */
 
-.prev-btn,
-.next-btn{
+.pages-div .prev-btn,
+.pages-div .next-btn{
     border:none;
     background-color: transparent;
     cursor:pointer;
@@ -439,56 +439,66 @@ body{
     transition: transform 0.5s;
 }
 
-.prev-btn:focus,
-.next-btn:focus{
+.pages-div .prev-btn:focus,
+.pages-div .next-btn:focus{
     outline:none;
 }
 
-.prev-btn:hover i,
-.next-btn:hover i{
+.pages-div .prev-btn:hover i,
+.pages-div .next-btn:hover i{
     color: #636363;
 }
 
-.prev-btn i,
-.next-btn i{
+.pages-div .prev-btn i,
+.pages-div .next-btn i{
     font-size:50px;
     color: gray;
 }
 
+/* OPEN BOOK BUTTON */
+.open-book-btn{
+    position:absolute;
+    bottom:5%;
+    left:46%;
+    width:10%;
+}
+
+.mobile-book{
+    display:none;
+}
 
 /* MOBILE */
 @media (max-width: 576px){
     .book-section{
-        top:20%;
-        left:30%;
-        width:40%;
-        height:30%;
+        top:10%;
+        left:17%;
+        width:80%;
+        height:70%;
     }
 
-    .book-section .book-div:before{
+    /* .book-section .book-div:before{
         width:16%;
         height:100%;
-    }
+    } */
     
-    .book-section .book-div:after{
+    /* .book-section .book-div:after{
         width:100%;
         height:100%;
         transform : rotateY(180deg) translateZ(25px);
-    }
+    } */
 
     .book-cover-div ul li{
-        width:15px;
-        height:10px;
+        width:30px;
+        height:30px;
         margin: 0 3px; 
     }
 
     .book-cover-div ul li span{
-        font-size: 0.7em;
+        /* font-size: 0em; */
     }
 
     .book-cover-div .it-word{
         top:17%;
-        left:-5%;
     }
     
     .book-cover-div .it-word ul{
@@ -497,7 +507,6 @@ body{
 
     .book-cover-div .ends-word{
         top:32%;
-        left:-5%;
     }
     
     .book-cover-div .ends-word ul{
@@ -506,7 +515,6 @@ body{
 
     .book-cover-div .with-word{
         top:43%;
-        left:-5%;
     }
     
     .book-cover-div .with-word ul{
@@ -515,7 +523,6 @@ body{
 
     .book-cover-div .us-word{
         top:51%;
-        left:-5%;
     }
     
     .book-cover-div .us-word ul{
@@ -523,5 +530,136 @@ body{
     }
 
     /* BOOK PAGES */
-    /* 362 saka 363 */
+    .pages-div{
+        display:none;
+    }
+
+    /* MOBILE FLIP BOOK */
+
+    .mobile-book{
+        position:absolute;
+        top:5%;
+        left:5%;
+        width:90%;
+        height:80%;
+        display: block;
+        visibility: hidden;
+    }
+
+    .mobile-book .pages-book-div{
+        position:absolute;
+        width:100%;
+        height:100%;
+        transition: transform 0.5s;
+    }
+
+    .mobile-book .pages-book-div .paper{
+        position: absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        perspective:1500px;
+    }
+
+    .mobile-book .pages-book-div .paper .front, 
+    .mobile-book .pages-book-div .paper .back{
+        background: white;
+        position: absolute;
+        width:100%;
+        height: 100%;
+        top:0;
+        left:0;
+        transform-origin: left;
+        transition: 0.5s;
+    }
+
+    .mobile-book .pages-book-div .paper .front{
+        z-index: 1;
+        backface-visibility: hidden;
+        border-left: 3px solid powderblue;
+    }
+
+    .mobile-book .pages-book-div .paper .back{
+        z-index: 0;
+    }
+
+    .mobile-book .pages-book-div .front-content,
+    .mobile-book .pages-book-div .back-content{
+        width:100%;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-book .pages-book-div .back-content{
+        transform: rotateY(180deg);
+    }
+
+    /* paper stack order */
+
+    .mobile-book .pages-book-div #page-1{
+        z-index: 3;
+    }
+
+    .mobile-book .pages-book-div #page-2{
+        z-index: 2;
+    }
+
+    .mobile-book .pages-book-div #page-3{
+        z-index: 1;
+    }
+
+    /* paper flipped */
+    .mobile-book .pages-book-div .flipped .front,
+    .mobile-book .pages-book-div .flipped .back{
+        transform: rotateY(-180deg);
+    }
+
+    /* buttons */
+
+    .mobile-book .prev-btn,
+    .mobile-book .next-btn{
+        position:absolute;
+        bottom:-18%;
+        border:0;
+        background-color: transparent;
+        cursor:pointer;
+        margin: 25px;
+        transition: transform 0.5s;
+    }
+
+    .mobile-book .prev-btn{
+        left:5%;
+    }
+
+    .mobile-book .next-btn{
+        right:5%;
+    }
+
+    .mobile-book .prev-btn:focus,
+    .mobile-book .next-btn:focus{
+        outline:none;
+    }
+
+    .mobile-book .prev-btn:hover i,
+    .mobile-book .next-btn:hover i{
+        color: #636363;
+    }
+
+    .mobile-book .prev-btn i,
+    .mobile-book .next-btn i{
+        font-size:50px;
+        color: gray;
+    }
+    
+
+    /* OPEN BOOK BUTTON */
+    .open-book-btn{
+        bottom:5%;
+        left:35%;
+        width:30%;
+        z-index: 1;
+    }
 }
