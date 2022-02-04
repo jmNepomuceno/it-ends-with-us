@@ -11,6 +11,10 @@ const page_1 = document.querySelector(".pages-div #page-1")
 const page_2 = document.querySelector(".pages-div #page-2")
 const page_3 = document.querySelector(".pages-div #page-3")
 
+let currentLocation = 1;
+let numOfPapers = 3;
+let max_location = numOfPapers + 1;
+
 // mobile book
 const pages_div_mobile = document.querySelector('.mobile-book')
 const prev_btn_mobile = document.querySelector(".mobile-book .prev-btn")
@@ -21,9 +25,9 @@ const page_1_mobile = document.querySelector(".mobile-book #page-1")
 const page_2_mobile = document.querySelector(".mobile-book #page-2")
 const page_3_mobile = document.querySelector(".mobile-book #page-3")
 
-let currentLocation = 1;
-let numOfPapers = 3;
-let max_location = numOfPapers + 1;
+let currentLocation_mobile = 1;
+let numOfPapers_mobile = 3;
+let max_location_mobile = numOfPapers + 1;
 
 // 
 const open_book_btn = document.querySelector('.open-book-btn')
@@ -131,6 +135,8 @@ const closeBook_mobile = (isAtBeginning) =>{
 
 }
 
+console.log(1 % 1 == 0)
+
 const goNextPage_mobile = (first) =>{
 
     pages_div_mobile.style.visibility = "visible"
@@ -139,31 +145,43 @@ const goNextPage_mobile = (first) =>{
     open_book_btn.style.pointerEvents = "none"
     open_book_btn.style.opacity = "0.3"
     
-    if(currentLocation < max_location){
-        switch(currentLocation){
+    if(currentLocation_mobile < max_location_mobile){
+        switch(currentLocation_mobile){
             case 1:
                 openBook();
                 page_1_mobile.classList.add('flipped')
                 page_1_mobile.style.zIndex = 1
+                book_mobile.style.left = "100%"
+                break;
+            case 1.5:
+                book_mobile.style.left = "0"
                 break;
             case 2:
                 page_2_mobile.classList.add('flipped')
                 page_2_mobile.style.zIndex = 2
+                book_mobile.style.left = "100%"
+                break;
+            case 2.5:
+                book_mobile.style.left = "0"
                 break;
             case 3:
                 page_3_mobile.classList.add('flipped')
                 page_3_mobile.style.zIndex = 3
+                book_mobile.style.left = "100%"
+                break;
+            case 3.5:
                 closeBook();
+                book_mobile.style.left = "0"
                 break;
         }
-        currentLocation++;
+        currentLocation_mobile += 0.5;
     }
 }
 
 const goPrevBtn_mobile = () => {
 
-    if(currentLocation > 1){
-        switch(currentLocation){
+    if(currentLocation_mobile > 1){
+        switch(currentLocation_mobile){
             case 2: 
                 closeBook(true);
                 page_1_mobile.classList.remove("flipped")
@@ -179,7 +197,7 @@ const goPrevBtn_mobile = () => {
                 page_3_mobile.style.zIndex = 1;
                 break;
         }
-        currentLocation--;
+        currentLocation_mobile -= 0.5
     }
 }
 
@@ -188,4 +206,4 @@ next_btn_mobile.addEventListener('click', goNextPage_mobile)
 
 
 // open book btn
-open_book_btn.addEventListener('click', ()=> goNextPage_mobile(first_open_book))
+open_book_btn.addEventListener('click', ()=> goNextPage(first_open_book))
