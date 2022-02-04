@@ -58,8 +58,8 @@ f_r_accept_btn.addEventListener('click', () =>{
         if(i == 4){
             clearInterval(f_r_accept_div_popping)
             f_r_accept_div.style.top = "-20%"
-            // let url = "file:///D:/GitHub/it-ends-with-us/book_page/book.html#";
-            let url = "https://jmnepomuceno.github.io/it-ends-with-us/book_page/book.html"
+            let url = "file:///D:/GitHub/it-ends-with-us/book_page/book.html#";
+            // let url = "https://jmnepomuceno.github.io/it-ends-with-us/book_page/book.html"
             window.location.href = url
         }
         i++;
