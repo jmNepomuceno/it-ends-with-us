@@ -579,7 +579,7 @@ body{
         backface-visibility: hidden;
         border-left: 3px solid powderblue;
     }
-
+    
     .mobile-book .pages-book-div .paper .back{
         z-index: 0;
     }

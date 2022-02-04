@@ -27,7 +27,7 @@ const page_3_mobile = document.querySelector(".mobile-book #page-3")
 
 let currentLocation_mobile = 1;
 let numOfPapers_mobile = 3;
-let max_location_mobile = numOfPapers + 1;
+let max_location_mobile = numOfPapers + 0.5;
 
 // 
 const open_book_btn = document.querySelector('.open-book-btn')
@@ -111,44 +111,16 @@ prev_btn.addEventListener('click', goPrevBtn)
 next_btn.addEventListener('click', goNextPage)
 
 // mobile buttons add event listeners
-const openBook_mobile = () =>{
-    book_mobile.style.transform = "translateX(50%)";
-    prev_btn_mobile.style.transform = "translateX(-180px)"
-    next_btn_mobile.style.transform = "translateX(180px)"
-}
-
-const closeBook_mobile = (isAtBeginning) =>{
-    if(isAtBeginning){
-        book_mobile.style.transform = "translateX(0%)";
-        pages_div_mobile.style.visibility = "hidden"
-        book_section.style.display = "flex"
-
-        open_book_btn.style.pointerEvents = "auto"
-        open_book_btn.style.opacity = "1"
-        first_open_book = true
-    }else{
-        book_mobile.style.transform = "translateX(100%)";
-    }
-    prev_btn_mobile.style.transform = "translateX(0px)"
-    next_btn_mobile.style.transform = "translateX(0px)"
-
-
-}
-
-console.log(1 % 1 == 0)
 
 const goNextPage_mobile = (first) =>{
-
     pages_div_mobile.style.visibility = "visible"
     book_section.style.display = "none"
-    first_open_book = false
     open_book_btn.style.pointerEvents = "none"
     open_book_btn.style.opacity = "0.3"
     
     if(currentLocation_mobile < max_location_mobile){
         switch(currentLocation_mobile){
             case 1:
-                openBook();
                 page_1_mobile.classList.add('flipped')
                 page_1_mobile.style.zIndex = 1
                 book_mobile.style.left = "100%"
@@ -169,33 +141,45 @@ const goNextPage_mobile = (first) =>{
                 page_3_mobile.style.zIndex = 3
                 book_mobile.style.left = "100%"
                 break;
-            case 3.5:
-                closeBook();
-                book_mobile.style.left = "0"
-                break;
         }
-        currentLocation_mobile += 0.5;
+
+        currentLocation_mobile += 0.5
     }
+    console.log(currentLocation_mobile , max_location_mobile)
 }
 
 const goPrevBtn_mobile = () => {
-
+    // console.log(currentLocation_mobile)
     if(currentLocation_mobile > 1){
         switch(currentLocation_mobile){
-            case 2: 
-                closeBook(true);
+
+            case 1.5:
+                pages_div_mobile.style.visibility = "hidden"
+                book_section.style.display = "flex"
+                open_book_btn.style.pointerEvents = "auto"
+                open_book_btn.style.opacity = "1"
+
                 page_1_mobile.classList.remove("flipped")
                 page_1_mobile.style.zIndex = 3;
+                book_mobile.style.left = "0"
                 break;
-            case 3: 
+            case 2:
+                book_mobile.style.left = "100%"
+                break;
+            case 2.5:
                 page_2_mobile.classList.remove("flipped")
                 page_2_mobile.style.zIndex = 2;
+                book_mobile.style.left = "0"
                 break;
-            case 4: 
-                openBook()
+            case 3: 
+                book_mobile.style.left = "100%"
+                break;
+            case 3.5:
                 page_3_mobile.classList.remove("flipped")
                 page_3_mobile.style.zIndex = 1;
+                book_mobile.style.left = "0"
                 break;
+
         }
         currentLocation_mobile -= 0.5
     }
@@ -206,4 +190,10 @@ next_btn_mobile.addEventListener('click', goNextPage_mobile)
 
 
 // open book btn
-open_book_btn.addEventListener('click', ()=> goNextPage(first_open_book))
+open_book_btn.addEventListener('click', ()=> {
+    if(window.innerWidth <= 400 && window.innerHeight <= 700){
+        goNextPage_mobile(first_open_book)
+    }else{
+        goNextPage(first_open_book)
+    }
+})
