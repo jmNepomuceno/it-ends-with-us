@@ -360,8 +360,8 @@ body{
 }
 .pages-div .pages-book-div{
     position:relative;
-    width:400px;
-    height:570px;
+    width:25vw;
+    height:75vh;
     transition: transform 0.5s;
 }
 
@@ -475,15 +475,26 @@ body{
 
 /* PAGES CONTENTS */
 
-#back_1_div_1{
+.contents-div{
     position: absolute;
     width:100%;
-    height:30%;
+    height:33.3%;
     border-bottom:1px solid  #a6a6a6;
+}
+
+#back_1_div_1{
     top:0;
 }
 
-#back_1_div_1 #view_btn{
+#back_1_div_2{
+    top:33.3%;
+}
+
+#back_1_div_3{
+    top:66.3%;
+}
+
+.contents-div .view_btn{
     position: absolute;
     top:22%;
     left:10%;
@@ -500,11 +511,11 @@ body{
     cursor: pointer;
 }
 
-#back_1_div_1 #view_btn:hover{
+.contents-div .view_btn:hover{
     color: #fff;
 }
 
-#back_1_div_1 #view_btn:before{
+.contents-div .view_btn:before{
     content: '';
     position: absolute;
     top:0;
@@ -517,16 +528,17 @@ body{
     transition: 0.5s;
 }
 
-#back_1_div_1 #view_btn:hover:before{
+.contents-div .view_btn:hover:before{
     width:100%;
 }
 
-#back_1_div_1 #view_btn span{
+.contents-div .view_btn span{
     position: relative;
     z-index: 1;
+    pointer-events: none;
 }
 
-#back_1_div_1 #back_1_date_1{
+.contents-div .contents-date{
     position: absolute;
     top:5%;
     left:2%;
@@ -537,11 +549,11 @@ body{
     padding:0;
     color:transparent;
     font-size: 1rem;
-    display: none;
     font-weight: bold;
+    display: none;
 }
 
-#back_1_div_1 #back_1_date_1:before{
+.contents-div .contents-date:before{
     content: attr(data-text);
     position: absolute;
     top:0;
@@ -551,8 +563,19 @@ body{
     color: #000;
     overflow: hidden;
     border-right: 1px solid #000;
-    animation: type 10s steps(20);
     white-space: nowrap;
+}
+
+.contents-div #back_1_date_1:before{
+    animation: type 10s steps(20);
+}
+
+.contents-div #back_1_date_2:before{
+    animation: type 10s steps(16);
+}
+
+.contents-div #back_1_date_3:before{
+    animation: type 10s steps(16);
 }
 
 @keyframes type{

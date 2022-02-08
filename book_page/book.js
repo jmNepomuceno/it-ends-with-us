@@ -36,8 +36,8 @@ let first_open_book = true
 // PAGES CONTENTS
 
 // BACK 1 CONTENT
-const view_back_1_div_1 = document.querySelectorAll('#back_1_div_1 #view_btn')
-const back_1_date_1 = document.querySelectorAll('#back_1_div_1 #back_1_date_1')
+const view_btns = document.querySelectorAll('.contents-div .view_btn')
+const contents_dates = document.querySelectorAll('.contents-div .contents-date')
 
 const openBook = () =>{
     book.style.transform = "translateX(50%)";
@@ -206,22 +206,32 @@ open_book_btn.addEventListener('click', ()=> {
 
 
 // PAGES CONTENTS
-// BACK 1 CONTENTS
-const view_function = () =>{
-    if(window.innerWidth <= 400 && window.innerHeight <= 700){
-        console.log("here")
-        back_1_date_1[1].style.display = "block"
-        view_back_1_div_1[1].style.display = "none"
-    }else{
-        console.log("asdf")
+/*
+    BACK 1 DIV 1 = 0
+    BACK 1 DIV 2 = 1
+    BACK 1 DIV 3 = 2
 
-        back_1_date_1[0].style.display = "block"
-        view_back_1_div_1[0].style.display = "none"
+    MOBILE
+    BACK 1 DIV 1 = 3
+    BACK 1 DIV 2 = 4
+    BACK 1 DIV 3 = 5
+*/
+// BACK 1 CONTENTS
+const view_function = (event) =>{
+    let index = parseInt(event.target.id)
+    console.log(index)
+    if(window.innerWidth <= 400 && window.innerHeight <= 700){
+
+        contents_dates[3].style.display = "block"
+        view_btns[3].style.display = "none"
+    }else{
+        contents_dates[index].style.display = "block"
+        view_btns[index].style.display = "none"
     }
     
 }
 
 
-for(let i = 0; i < 2; i++){
-    view_back_1_div_1[i].addEventListener('click', view_function)
+for(let i = 0; i < 6; i++){
+    view_btns[i].addEventListener('click', view_function, false)
 }
