@@ -36,8 +36,8 @@ let first_open_book = true
 // PAGES CONTENTS
 
 // BACK 1 CONTENT
-const view_back_1_div_1 = document.querySelector('#back_1_div_1 #view_btn')
-const back_1_date_1 = document.querySelector('#back_1_div_1 #back_1_date_1')
+const view_back_1_div_1 = document.querySelectorAll('#back_1_div_1 #view_btn')
+const back_1_date_1 = document.querySelectorAll('#back_1_div_1 #back_1_date_1')
 
 const openBook = () =>{
     book.style.transform = "translateX(50%)";
@@ -204,10 +204,24 @@ open_book_btn.addEventListener('click', ()=> {
     }
 })
 
+
 // PAGES CONTENTS
 // BACK 1 CONTENTS
-view_back_1_div_1.addEventListener('click', ()=>{
+const view_function = () =>{
+    if(window.innerWidth <= 400 && window.innerHeight <= 700){
+        console.log("here")
+        back_1_date_1[1].style.display = "block"
+        view_back_1_div_1[1].style.display = "none"
+    }else{
+        console.log("asdf")
 
-    back_1_date_1.style.display = "block"
-    view_back_1_div_1.style.display = "none"
-})
+        back_1_date_1[0].style.display = "block"
+        view_back_1_div_1[0].style.display = "none"
+    }
+    
+}
+
+
+for(let i = 0; i < 2; i++){
+    view_back_1_div_1[i].addEventListener('click', view_function)
+}
