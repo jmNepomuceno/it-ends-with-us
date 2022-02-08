@@ -10,9 +10,11 @@ const book = document.querySelector(".pages-div .pages-book-div")
 const page_1 = document.querySelector(".pages-div #page-1")
 const page_2 = document.querySelector(".pages-div #page-2")
 const page_3 = document.querySelector(".pages-div #page-3")
+const page_4 = document.querySelector(".pages-div #page-4")
+const page_5 = document.querySelector(".pages-div #page-5")
 
 let currentLocation = 1;
-let numOfPapers = 3;
+let numOfPapers = 5;
 let max_location = numOfPapers + 1;
 
 // mobile book
@@ -24,9 +26,11 @@ const book_mobile = document.querySelector(".mobile-book .pages-book-div")
 const page_1_mobile = document.querySelector(".mobile-book #page-1")
 const page_2_mobile = document.querySelector(".mobile-book #page-2")
 const page_3_mobile = document.querySelector(".mobile-book #page-3")
+const page_4_mobile = document.querySelector(".mobile-book #page-4")
+const page_5_mobile = document.querySelector(".mobile-book #page-5")
 
 let currentLocation_mobile = 1;
-let numOfPapers_mobile = 3;
+let numOfPapers_mobile = 5;
 let max_location_mobile = numOfPapers + 0.5;
 
 // 
@@ -84,6 +88,14 @@ const goNextPage = (first) =>{
             case 3:
                 page_3.classList.add('flipped')
                 page_3.style.zIndex = 3
+                break;
+            case 4:
+                page_4.classList.add('flipped')
+                page_4.style.zIndex = 4
+                break;
+            case 5:
+                page_5.classList.add('flipped')
+                page_5.style.zIndex = 5
                 closeBook();
                 break;
         }
@@ -97,16 +109,24 @@ const goPrevBtn = () => {
             case 2: 
                 closeBook(true);
                 page_1.classList.remove("flipped")
-                page_1.style.zIndex = 3;
+                page_1.style.zIndex = 5;
                 break;
             case 3: 
                 page_2.classList.remove("flipped")
-                page_2.style.zIndex = 2;
+                page_2.style.zIndex = 4;
                 break;
             case 4: 
-                openBook()
                 page_3.classList.remove("flipped")
-                page_3.style.zIndex = 1;
+                page_3.style.zIndex = 3;
+                break;
+            case 5: 
+                page_4.classList.remove("flipped")
+                page_4.style.zIndex = 2;
+                break;
+            case 6: 
+                openBook()
+                page_5.classList.remove("flipped")
+                page_5.style.zIndex = 1;
                 break;
         }
         currentLocation--;
@@ -147,6 +167,23 @@ const goNextPage_mobile = (first) =>{
                 page_3_mobile.style.zIndex = 3
                 book_mobile.style.left = "100%"
                 break;
+
+            case 3.5:
+                book_mobile.style.left = "0"
+                break;
+            case 4:
+                page_4_mobile.classList.add('flipped')
+                page_4_mobile.style.zIndex = 4
+                book_mobile.style.left = "100%"
+                break;
+            case 4.5:
+                book_mobile.style.left = "0"
+                break;
+            case 5:
+                page_5_mobile.classList.add('flipped')
+                page_5_mobile.style.zIndex = 5
+                book_mobile.style.left = "100%"
+                break;
         }
 
         currentLocation_mobile += 0.5
@@ -166,7 +203,7 @@ const goPrevBtn_mobile = () => {
                 open_book_btn.style.opacity = "1"
 
                 page_1_mobile.classList.remove("flipped")
-                page_1_mobile.style.zIndex = 3;
+                page_1_mobile.style.zIndex = 5;
                 book_mobile.style.left = "0"
                 break;
             case 2:
@@ -174,7 +211,7 @@ const goPrevBtn_mobile = () => {
                 break;
             case 2.5:
                 page_2_mobile.classList.remove("flipped")
-                page_2_mobile.style.zIndex = 2;
+                page_2_mobile.style.zIndex = 4;
                 book_mobile.style.left = "0"
                 break;
             case 3: 
@@ -182,7 +219,24 @@ const goPrevBtn_mobile = () => {
                 break;
             case 3.5:
                 page_3_mobile.classList.remove("flipped")
-                page_3_mobile.style.zIndex = 1;
+                page_3_mobile.style.zIndex = 3;
+                book_mobile.style.left = "0"
+                break;
+            
+            case 4: 
+                book_mobile.style.left = "100%"
+                break;
+            case 4.5:
+                page_4_mobile.classList.remove("flipped")
+                page_4_mobile.style.zIndex = 2;
+                book_mobile.style.left = "0"
+                break;
+            case 5: 
+                book_mobile.style.left = "100%"
+                break;
+            case 5.5:
+                page_5_mobile.classList.remove("flipped")
+                page_5_mobile.style.zIndex = 1;
                 book_mobile.style.left = "0"
                 break;
 
