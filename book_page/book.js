@@ -33,6 +33,12 @@ let max_location_mobile = numOfPapers + 0.5;
 const open_book_btn = document.querySelector('.open-book-btn')
 let first_open_book = true
 
+// PAGES CONTENTS
+
+// BACK 1 CONTENT
+const view_back_1_div_1 = document.querySelector('#back_1_div_1 #view_btn')
+const back_1_date_1 = document.querySelector('#back_1_div_1 #back_1_date_1')
+
 const openBook = () =>{
     book.style.transform = "translateX(50%)";
     prev_btn.style.transform = "translateX(-180px)"
@@ -196,4 +202,12 @@ open_book_btn.addEventListener('click', ()=> {
     }else{
         goNextPage(first_open_book)
     }
+})
+
+// PAGES CONTENTS
+// BACK 1 CONTENTS
+view_back_1_div_1.addEventListener('click', ()=>{
+
+    back_1_date_1.style.display = "block"
+    view_back_1_div_1.style.display = "none"
 })
