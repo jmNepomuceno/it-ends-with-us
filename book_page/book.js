@@ -209,12 +209,10 @@ open_book_btn.addEventListener('click', ()=> {
 /*
     BACK 1 DIV 1 = 0
     BACK 1 DIV 2 = 1
-    BACK 1 DIV 3 = 2
 
     MOBILE
-    BACK 1 DIV 1 = 3
-    BACK 1 DIV 2 = 4
-    BACK 1 DIV 3 = 5
+    BACK 1 DIV 1 = 2
+    BACK 1 DIV 2 = 3
 */
 // BACK 1 CONTENTS
 const view_function = (event) =>{
@@ -222,8 +220,8 @@ const view_function = (event) =>{
     console.log(index)
     if(window.innerWidth <= 400 && window.innerHeight <= 700){
 
-        contents_dates[3].style.display = "block"
-        view_btns[3].style.display = "none"
+        contents_dates[index].style.display = "block"
+        view_btns[index].style.display = "none"
     }else{
         contents_dates[index].style.display = "block"
         view_btns[index].style.display = "none"
@@ -232,6 +230,6 @@ const view_function = (event) =>{
 }
 
 
-for(let i = 0; i < 6; i++){
+for(let i = 0; i < 4; i++){
     view_btns[i].addEventListener('click', view_function, false)
 }

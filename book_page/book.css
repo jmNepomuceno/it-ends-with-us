@@ -478,7 +478,7 @@ body{
 .contents-div{
     position: absolute;
     width:100%;
-    height:33.3%;
+    height:50%;
     border-bottom:1px solid  #a6a6a6;
 }
 
@@ -487,18 +487,14 @@ body{
 }
 
 #back_1_div_2{
-    top:33.3%;
-}
-
-#back_1_div_3{
-    top:66.3%;
+    top:50%;
 }
 
 .contents-div .view_btn{
     position: absolute;
-    top:22%;
-    left:10%;
-    width:75%;
+    top:35%;
+    left:8%;
+    width:84%;
     height:75px;
     margin: 10px 0;
     color: #000;
@@ -567,14 +563,10 @@ body{
 }
 
 .contents-div #back_1_date_1:before{
-    animation: type 10s steps(20);
+    animation: type 10s steps(19);
 }
 
 .contents-div #back_1_date_2:before{
-    animation: type 10s steps(16);
-}
-
-.contents-div #back_1_date_3:before{
     animation: type 10s steps(16);
 }
 
@@ -793,7 +785,7 @@ body{
     }
 
     /* PAGES CONTENTS */
-    #back_1_div_1 #back_1_date_1{
+    .contents-date{
         font-size: 0.8rem;
     }
 }
