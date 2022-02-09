@@ -52,6 +52,8 @@ let first_open_book = true
 // BACK 1 CONTENT
 const view_btns = document.querySelectorAll('.contents-div .view_btn')
 const contents_dates = document.querySelectorAll('.contents-div .contents-date')
+const contents_body = document.querySelectorAll('.contents-div section')
+
 
 const openBook = () =>{
     book.style.transform = "translateX(50%)";
@@ -415,6 +417,7 @@ const view_function = (event) =>{
         view_btns[index].style.display = "none"
     }else{
         contents_dates[index].style.display = "block"
+        contents_body[index].style.display = "flex"
         view_btns[index].style.display = "none"
     }
     

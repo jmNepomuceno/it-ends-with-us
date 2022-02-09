@@ -515,7 +515,7 @@ body{
 }
 .contents-div .view_btn{
     position: absolute;
-    top:35%;
+    top:40%;
     left:8%;
     width:84%;
     height:75px;
@@ -528,6 +528,8 @@ body{
     align-items: center;
     transition: 0.5s;
     cursor: pointer;
+
+    /* display:none; */
 }
 
 .contents-div .view_btn:hover{
@@ -579,7 +581,7 @@ body{
     left:0;
     width:100%;
     height: 100%;
-    color: #000;
+    color: #fff;
     overflow: hidden;
     border-right: 1px solid #000;
     white-space: nowrap;
@@ -589,9 +591,10 @@ body{
     animation: type 10s steps(19);
 }
 
-.contents-div #back_1_date_2:before{
-    animation: type 10s steps(16);
+.contents-div #back_1_date_1{
+    top:2%;
 }
+
 
 /* CONTENT BACK 1 DIV 1 */
 #back_1_div_1 section{
@@ -599,14 +602,69 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90%;
+    min-height: 100%;
+
+    display:none;
 }
 
 #back_1_div_1 section .box{
-    position:relative;
-    width:300px;
-    height:200px;
+    position:absolute;
+    width:50%;
+    height:42%;
     background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#back_1_div_1 section #box-1{
+    top:8%;
+    left:5%;
+}
+
+#back_1_div_1 section #box-2{
+    bottom:4%;
+    right:5%;
+}
+
+#back_1_div_1 section .box::before{
+    content: "";
+    position: absolute;
+    top:-4px;
+    left:-4px;
+    right: -4px;
+    bottom: -4px;
+    transform: skewX(2deg) skewY(4deg);
+    background: linear-gradient(315deg, #00ccff, #0e1538, #d400d4);
+}
+
+#back_1_div_1 section .box::after{
+    content: "";
+    position: absolute;
+    top:-4px;
+    left:-4px;
+    right: -4px;
+    bottom: -4px;
+    transform: skewX(2deg) skewY(4deg);
+    background: linear-gradient(315deg, #00ccff, #0e1538, #d400d4);
+    filter: blur(50px);
+}
+
+#back_1_div_1 section .box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: #0e1538;
+    z-index: 10;
+}
+
+#back_1_div_1 section .box img{
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 11;
 }
 
 @keyframes type{
