@@ -512,7 +512,28 @@
                 <div class="paper" id="page-3">
                     <div class="front" id="p3-front">
                         <div class="front-content" id="p3-front-content">
-                            <h1>Front 3</h1>
+
+                            <div class="contents-div" id="front_3_div_1">
+                                
+                                <a class="view_btn" id="3"> <span>VIEW</span> </a>
+
+                                <h1 class="contents-date" id="front_3_date_1" data-text="November 13, 2021">November 13, 2021</h1>
+                                
+                                <section>
+                                    <div class="img_box">
+                                        <img src="../imgs/front_3_img_1.jpg" alt="img" style="--i:2;--j:0;" />
+                                        <img src="../imgs/front_3_img_1.jpg" alt="img" style="--i:1;--j:1;" />
+                                        <img src="../imgs/front_3_img_1.jpg" alt="img" style="--i:0;--j:2;" />
+                                    </div>
+
+                                    <div class="img_box">
+                                        <img src="../imgs/front_3_img_2.jpg" alt="img" style="--i:2;--j:0;" />
+                                        <img src="../imgs/front_3_img_2.jpg" alt="img" style="--i:1;--j:1;" />
+                                        <img src="../imgs/front_3_img_2.jpg" alt="img" style="--i:0;--j:2;" />
+                                    </div>
+                                </section>
+                            
+                            </div>
                         </div>
                     </div>
 
@@ -650,7 +671,7 @@
 
                             <div class="contents-div" id="back_1_div_1">
                                 
-                                <a class="view_btn" id="2"> <span>VIEW</span> </a>
+                                <a class="view_btn" id="0"> <span>VIEW</span> </a>
 
                                 <h1 class="contents-date" id="back_1_date_1" data-text="September 23, 2021">September 23, 2021</h1>
                                 
@@ -680,7 +701,7 @@
 
                             <div class="contents-div" id="front_2_div_1">
                                 
-                                <a class="view_btn" id="3"> <span>VIEW</span> </a>
+                                <a class="view_btn" id="0"> <span>VIEW</span> </a>
 
                                 <h1 class="contents-date" id="front_2_date_1" data-text="October 29, 2021">October 29, 2021</h1>
                                 
@@ -704,7 +725,38 @@
 
                     <div class="back" id="p2-back">
                         <div class="back-content" id="p2-back-content">
-                            <h1>Back 2</h1>
+                            <div class="contents-div" id="back_2_div_1">
+                                
+                                <a class="view_btn" id="0"> <span>VIEW</span> </a>
+
+                                <h1 class="contents-date" id="back_2_date_1" data-text="November 7, 2021">November 7, 2021</h1>
+                                
+                                <section id="section-bubble">
+                                    <video width="320" height="240" controls muted>
+                                        <source src="../imgs/back_2_vid.mp4" type="video/mp4">
+                                        <source src="../imgs/back_2_vid.ogg" type="video/ogg">
+                                      
+                                    </video>
+                                </section>
+                                
+                                <script type="text/javascript">
+                                    function createBubble(){
+                                        const section = document.querySelector('#section-bubble')
+                                        const createElement = document.createElement('span')
+                                        var size = Math.random() * 60;
+
+                                        createElement.style.width = size + 'px'
+                                        createElement.style.height = size + 'px'
+                                        createElement.style.left = Math.random() * innerWidth + "px"
+                                        section.appendChild(createElement)
+                                        
+                                        setTimeout(()=>{
+                                            createElement.remove()
+                                        },4000)
+                                    }
+                                    setInterval(createBubble,50)
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -713,7 +765,28 @@
                 <div class="paper" id="page-3">
                     <div class="front" id="p3-front">
                         <div class="front-content" id="p3-front-content">
-                            <h1>Front 3</h1>
+                            
+                            <div class="contents-div" id="front_3_div_1">
+                                
+                                <a class="view_btn" id="7"> <span>VIEW</span> </a>
+
+                                <h1 class="contents-date" id="front_3_date_1" data-text="November 13, 2021">November 13, 2021</h1>
+                                
+                                <section>
+                                    <div class="img_box">
+                                        <img src="../imgs/front_3_img_1.jpg" alt="img" style="--i:2;--j:0;" />
+                                        <img src="../imgs/front_3_img_1.jpg" alt="img" style="--i:1;--j:1;" />
+                                        <img src="../imgs/front_3_img_1.jpg" alt="img" style="--i:0;--j:2;" />
+                                    </div>
+
+                                    <div class="img_box">
+                                        <img src="../imgs/front_3_img_2.jpg" alt="img" style="--i:2;--j:0;" />
+                                        <img src="../imgs/front_3_img_2.jpg" alt="img" style="--i:1;--j:1;" />
+                                        <img src="../imgs/front_3_img_2.jpg" alt="img" style="--i:0;--j:2;" />
+                                    </div>
+                                </section>
+                            
+                            </div>
                         </div>
                     </div>
 

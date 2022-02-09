@@ -404,10 +404,14 @@ open_book_btn.addEventListener('click', ()=> {
 /*
     BACK 1 = 0
     FRONT 2 = 1
-
+    BACK 2 = 2
+    FRONT 3 = 3
 
     MOBILE
-    BACK 1 = 2
+    BACK 1 = 4
+    FRONT 2 = 5
+    BACK 2 = 6
+    FRONT 3 = 7
 */
 // BACK 1 CONTENTS
 const view_function = (event) =>{
@@ -427,9 +431,9 @@ const view_function = (event) =>{
     }
     
 }
-console.log("November 7, 2021".length)
+console.log("November 13, 2021".length)
 
-for(let i = 0; i < 4; i++){
+for(let i = 0; i < 8; i++){
     view_btns[i].addEventListener('click', view_function, false)
 }
 
