@@ -612,6 +612,19 @@ body{
     color: #fff;
 }
 
+.contents-div #back_2_date_1:before{
+    animation: type 10s steps(16);
+}
+
+.contents-div #back_2_date_1{
+    top:2%;
+    z-index: 1;
+}
+
+.contents-div #back_2_date_1:before{
+    color: #fff;
+}
+
 
 
 /* CONTENT BACK 1 DIV 1 */
@@ -707,6 +720,7 @@ body{
     0 0 0 8px rgba(255,255,255, 0.1),
     0 0 20px rgba(255, 255, 255, 1);
     animation: stars 3s linear infinite;
+    z-index: 1;
 }
 
 #front_2_div_1 section span::before{
@@ -756,6 +770,67 @@ body{
     left: initial;
     animation-delay: 1s;
     animation-duration: 3s;
+}
+
+#front_2_div_1 section img{
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    top: 30%;
+    left:20%;
+    border-radius: 5px;
+}
+
+#back_2_div_1 section{
+    position: relative;
+    width:100%;
+    height: 100%;
+    background: #111;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    display:none;
+}
+
+#back_2_div_1 section video{
+    height: 80%;
+}
+
+#back_2_div_1 section span{
+    position: absolute;
+    bottom: 5%;
+    background: transparent;
+    border-radius: 50%;
+
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
+    animation: bubbles 4s linear infinite;
+}
+
+#back_2_div_1 section span:before{
+    content: " ";
+    position: absolute;
+    width:100%;
+    height: 100%;
+    transform: scale(0.25) translate(-70%,-70%);
+    background: radial-gradient(#fff, transparent);
+    border-radius: 50%;
+}
+
+@keyframes bubbles {
+    0%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-1200%);
+        opacity: 0;
+    }
 }
 
 @keyframes stars{

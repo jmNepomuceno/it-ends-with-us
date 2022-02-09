@@ -427,7 +427,7 @@ const view_function = (event) =>{
     }
     
 }
-console.log("September 23, 2021".length)
+console.log("November 7, 2021".length)
 
 for(let i = 0; i < 4; i++){
     view_btns[i].addEventListener('click', view_function, false)

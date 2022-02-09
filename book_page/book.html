@@ -462,6 +462,7 @@
                                     <span></span>
                                     <span></span>
                                     <span></span>
+                                    <img src="../imgs/front_2_img1.jpg" alt="img"/>
                                 </section>
                             
                             </div>
@@ -470,7 +471,39 @@
 
                     <div class="back" id="p2-back">
                         <div class="back-content" id="p2-back-content">
-                            <h1>Back 2</h1>
+
+                            <div class="contents-div" id="back_2_div_1">
+                                
+                                <a class="view_btn" id="2"> <span>VIEW</span> </a>
+
+                                <h1 class="contents-date" id="back_2_date_1" data-text="November 7, 2021">November 7, 2021</h1>
+                                
+                                <section id="section-bubble">
+                                    <video width="320" height="240" controls muted>
+                                        <source src="../imgs/back_2_vid.mp4" type="video/mp4">
+                                        <source src="../imgs/back_2_vid.ogg" type="video/ogg">
+                                      
+                                    </video>
+                                </section>
+                                
+                                <script type="text/javascript">
+                                    function createBubble(){
+                                        const section = document.querySelector('#section-bubble')
+                                        const createElement = document.createElement('span')
+                                        var size = Math.random() * 60;
+
+                                        createElement.style.width = size + 'px'
+                                        createElement.style.height = size + 'px'
+                                        createElement.style.left = Math.random() * innerWidth + "px"
+                                        section.appendChild(createElement)
+                                        
+                                        setTimeout(()=>{
+                                            createElement.remove()
+                                        },4000)
+                                    }
+                                    setInterval(createBubble,50)
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -649,7 +682,7 @@
                                 
                                 <a class="view_btn" id="3"> <span>VIEW</span> </a>
 
-                                <h1 class="contents-date" id="front_2_date_1" data-text="September 23, 2021">September 23, 2021</h1>
+                                <h1 class="contents-date" id="front_2_date_1" data-text="October 29, 2021">October 29, 2021</h1>
                                 
                                 <section>
                                     <span></span>
@@ -662,6 +695,7 @@
                                     <span></span>
                                     <span></span>
                                     <span></span>
+                                    <img src="../imgs/front_2_img1.jpg" alt="img"/>
                                 </section>
                             
                             </div>
