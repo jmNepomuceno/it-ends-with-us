@@ -581,7 +581,7 @@ body{
     left:0;
     width:100%;
     height: 100%;
-    color: #fff;
+    color: #000;
     overflow: hidden;
     border-right: 1px solid #000;
     white-space: nowrap;
@@ -594,6 +594,23 @@ body{
 .contents-div #back_1_date_1{
     top:2%;
 }
+
+.contents-div #back_1_date_1:before{
+    color: #fff;
+}
+
+.contents-div #front_2_date_1:before{
+    animation: type 10s steps(19);
+}
+
+/* .contents-div #front_2_date_1{
+    top:2%;
+}
+
+.contents-div #front_2_date_1:before{
+    color: #fff;
+} */
+
 
 
 /* CONTENT BACK 1 DIV 1 */

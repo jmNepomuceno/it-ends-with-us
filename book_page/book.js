@@ -402,10 +402,12 @@ open_book_btn.addEventListener('click', ()=> {
 
 // PAGES CONTENTS
 /*
-    BACK 1 DIV 1 = 0
+    BACK 1 = 0
+    FRONT 2 = 1
+
 
     MOBILE
-    BACK 1 DIV 1 = 1
+    BACK 1 = 2
 */
 // BACK 1 CONTENTS
 const view_function = (event) =>{
@@ -427,6 +429,6 @@ const view_function = (event) =>{
 }
 
 
-for(let i = 0; i < 2; i++){
+for(let i = 0; i < 3; i++){
     view_btns[i].addEventListener('click', view_function, false)
 }
