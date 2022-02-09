@@ -12,9 +12,14 @@ const page_2 = document.querySelector(".pages-div #page-2")
 const page_3 = document.querySelector(".pages-div #page-3")
 const page_4 = document.querySelector(".pages-div #page-4")
 const page_5 = document.querySelector(".pages-div #page-5")
+const page_6 = document.querySelector(".pages-div #page-6")
+const page_7 = document.querySelector(".pages-div #page-7")
+const page_8 = document.querySelector(".pages-div #page-8")
+const page_9 = document.querySelector(".pages-div #page-9")
+const page_10 = document.querySelector(".pages-div #page-10")
 
 let currentLocation = 1;
-let numOfPapers = 5;
+let numOfPapers = 10;
 let max_location = numOfPapers + 1;
 
 // mobile book
@@ -28,9 +33,14 @@ const page_2_mobile = document.querySelector(".mobile-book #page-2")
 const page_3_mobile = document.querySelector(".mobile-book #page-3")
 const page_4_mobile = document.querySelector(".mobile-book #page-4")
 const page_5_mobile = document.querySelector(".mobile-book #page-5")
+const page_6_mobile = document.querySelector(".mobile-book #page-6")
+const page_7_mobile = document.querySelector(".mobile-book #page-7")
+const page_8_mobile = document.querySelector(".mobile-book #page-8")
+const page_9_mobile = document.querySelector(".mobile-book #page-9")
+const page_10_mobile = document.querySelector(".mobile-book #page-10")
 
 let currentLocation_mobile = 1;
-let numOfPapers_mobile = 5;
+let numOfPapers_mobile = 10;
 let max_location_mobile = numOfPapers + 0.5;
 
 // 
@@ -96,6 +106,26 @@ const goNextPage = (first) =>{
             case 5:
                 page_5.classList.add('flipped')
                 page_5.style.zIndex = 5
+                break;
+            case 6:
+                page_6.classList.add('flipped')
+                page_6.style.zIndex = 6
+                break;
+            case 7:
+                page_7.classList.add('flipped')
+                page_7.style.zIndex = 7
+                break;
+            case 8:
+                page_8.classList.add('flipped')
+                page_8.style.zIndex = 8
+                break;
+            case 9:
+                page_9.classList.add('flipped')
+                page_9.style.zIndex = 9
+                break;
+            case 10:
+                page_10.classList.add('flipped')
+                page_10.style.zIndex = 10
                 closeBook();
                 break;
         }
@@ -109,24 +139,45 @@ const goPrevBtn = () => {
             case 2: 
                 closeBook(true);
                 page_1.classList.remove("flipped")
-                page_1.style.zIndex = 5;
+                page_1.style.zIndex = 10;
                 break;
             case 3: 
                 page_2.classList.remove("flipped")
-                page_2.style.zIndex = 4;
+                page_2.style.zIndex = 9;
                 break;
             case 4: 
                 page_3.classList.remove("flipped")
-                page_3.style.zIndex = 3;
+                page_3.style.zIndex = 8;
                 break;
             case 5: 
                 page_4.classList.remove("flipped")
-                page_4.style.zIndex = 2;
+                page_4.style.zIndex = 7;
                 break;
             case 6: 
-                openBook()
                 page_5.classList.remove("flipped")
-                page_5.style.zIndex = 1;
+                page_5.style.zIndex = 6;
+                break;
+
+            case 7: 
+                page_6.classList.remove("flipped")
+                page_6.style.zIndex = 5;
+                break;
+            case 8: 
+                page_7.classList.remove("flipped")
+                page_7.style.zIndex = 4;
+                break;
+            case 9: 
+                page_8.classList.remove("flipped")
+                page_8.style.zIndex = 3;
+                break;
+            case 10: 
+                page_9.classList.remove("flipped")
+                page_9.style.zIndex = 2;
+                break;
+            case 11: 
+                openBook()
+                page_10.classList.remove("flipped")
+                page_10.style.zIndex = 1;
                 break;
         }
         currentLocation--;
@@ -184,6 +235,50 @@ const goNextPage_mobile = (first) =>{
                 page_5_mobile.style.zIndex = 5
                 book_mobile.style.left = "100%"
                 break;
+
+            // adsf
+            
+            case 5.5:
+                book_mobile.style.left = "0"
+                break;
+            case 6:
+                page_6_mobile.classList.add('flipped')
+                page_6_mobile.style.zIndex = 6
+                book_mobile.style.left = "100%"
+                break;
+            case 6.5:
+                book_mobile.style.left = "0"
+                break;
+            case 7:
+                page_7_mobile.classList.add('flipped')
+                page_7_mobile.style.zIndex = 7
+                book_mobile.style.left = "100%"
+                break;
+
+            case 7.5:
+                book_mobile.style.left = "0"
+                break;
+            case 8:
+                page_8_mobile.classList.add('flipped')
+                page_8_mobile.style.zIndex = 8
+                book_mobile.style.left = "100%"
+                break;
+            case 8.5:
+                book_mobile.style.left = "0"
+                break;
+            case 9:
+                page_9_mobile.classList.add('flipped')
+                page_9_mobile.style.zIndex = 9
+                book_mobile.style.left = "100%"
+                break;
+            case 9.5:
+                book_mobile.style.left = "0"
+                break;
+            case 10:
+                page_10_mobile.classList.add('flipped')
+                page_10_mobile.style.zIndex = 10
+                book_mobile.style.left = "100%"
+                break;
         }
 
         currentLocation_mobile += 0.5
@@ -203,7 +298,7 @@ const goPrevBtn_mobile = () => {
                 open_book_btn.style.opacity = "1"
 
                 page_1_mobile.classList.remove("flipped")
-                page_1_mobile.style.zIndex = 5;
+                page_1_mobile.style.zIndex = 10;
                 book_mobile.style.left = "0"
                 break;
             case 2:
@@ -211,7 +306,7 @@ const goPrevBtn_mobile = () => {
                 break;
             case 2.5:
                 page_2_mobile.classList.remove("flipped")
-                page_2_mobile.style.zIndex = 4;
+                page_2_mobile.style.zIndex = 9;
                 book_mobile.style.left = "0"
                 break;
             case 3: 
@@ -219,7 +314,7 @@ const goPrevBtn_mobile = () => {
                 break;
             case 3.5:
                 page_3_mobile.classList.remove("flipped")
-                page_3_mobile.style.zIndex = 3;
+                page_3_mobile.style.zIndex = 8;
                 book_mobile.style.left = "0"
                 break;
             
@@ -228,7 +323,7 @@ const goPrevBtn_mobile = () => {
                 break;
             case 4.5:
                 page_4_mobile.classList.remove("flipped")
-                page_4_mobile.style.zIndex = 2;
+                page_4_mobile.style.zIndex = 7;
                 book_mobile.style.left = "0"
                 break;
             case 5: 
@@ -236,7 +331,51 @@ const goPrevBtn_mobile = () => {
                 break;
             case 5.5:
                 page_5_mobile.classList.remove("flipped")
-                page_5_mobile.style.zIndex = 1;
+                page_5_mobile.style.zIndex = 6;
+                book_mobile.style.left = "0"
+                break;
+
+            // asdf
+
+            case 6:
+                book_mobile.style.left = "100%"
+                break;
+            case 6.5:
+                page_6_mobile.classList.remove("flipped")
+                page_6_mobile.style.zIndex = 5;
+                book_mobile.style.left = "0"
+                break;
+            case 7: 
+                book_mobile.style.left = "100%"
+                break;
+            case 7.5:
+                page_7_mobile.classList.remove("flipped")
+                page_7_mobile.style.zIndex = 4;
+                book_mobile.style.left = "0"
+                break;
+            
+            case 8: 
+                book_mobile.style.left = "100%"
+                break;
+            case 8.5:
+                page_8_mobile.classList.remove("flipped")
+                page_8_mobile.style.zIndex = 3;
+                book_mobile.style.left = "0"
+                break;
+            case 9: 
+                book_mobile.style.left = "100%"
+                break;
+            case 9.5:
+                page_9_mobile.classList.remove("flipped")
+                page_9_mobile.style.zIndex = 2;
+                book_mobile.style.left = "0"
+                break;
+            case 10: 
+                book_mobile.style.left = "100%"
+                break;
+            case 10.5:
+                page_10_mobile.classList.remove("flipped")
+                page_10_mobile.style.zIndex = 1;
                 book_mobile.style.left = "0"
                 break;
 
@@ -262,11 +401,9 @@ open_book_btn.addEventListener('click', ()=> {
 // PAGES CONTENTS
 /*
     BACK 1 DIV 1 = 0
-    BACK 1 DIV 2 = 1
 
     MOBILE
-    BACK 1 DIV 1 = 2
-    BACK 1 DIV 2 = 3
+    BACK 1 DIV 1 = 1
 */
 // BACK 1 CONTENTS
 const view_function = (event) =>{
@@ -284,6 +421,6 @@ const view_function = (event) =>{
 }
 
 
-for(let i = 0; i < 4; i++){
+for(let i = 0; i < 2; i++){
     view_btns[i].addEventListener('click', view_function, false)
 }
