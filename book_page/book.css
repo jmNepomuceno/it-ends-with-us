@@ -588,7 +588,7 @@ body{
 }
 
 .contents-div #back_1_date_1:before{
-    animation: type 10s steps(19);
+    animation: type 10s steps(18);
 }
 
 .contents-div #back_1_date_1{
@@ -600,16 +600,17 @@ body{
 }
 
 .contents-div #front_2_date_1:before{
-    animation: type 10s steps(19);
+    animation: type 10s steps(16);
 }
 
-/* .contents-div #front_2_date_1{
+.contents-div #front_2_date_1{
     top:2%;
+    z-index: 1;
 }
 
 .contents-div #front_2_date_1:before{
     color: #fff;
-} */
+}
 
 
 
@@ -682,6 +683,92 @@ body{
     width:100%;
     height:100%;
     z-index: 11;
+}
+
+#front_2_div_1 section{
+    position: relative;
+    width:100%;
+    height:100%;
+    background: url(../imgs/front_2_img2.jpg);
+    background-size: 100% 100%;
+    overflow: hidden;
+    display:none;
+}
+
+#front_2_div_1 section span{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow:0 0 0 4px rgba(255,255,255,0.1),
+    0 0 0 8px rgba(255,255,255, 0.1),
+    0 0 20px rgba(255, 255, 255, 1);
+    animation: stars 3s linear infinite;
+}
+
+#front_2_div_1 section span::before{
+    content: "";
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width:300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+#front_2_div_1 section span:nth-child(1){
+    top: 5%;
+    right: 0;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
+
+#front_2_div_1 section span:nth-child(2){
+    top: 20%;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+
+#front_2_div_1 section span:nth-child(3){
+    top: 40%;
+    right: 0;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+}
+
+#front_2_div_1 section span:nth-child(4){
+    top: 70%;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+
+#front_2_div_1 section span:nth-child(5){
+    top: 95%;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+
+@keyframes stars{
+    0%{
+        transform: rotate(315deg) translateX(0);
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
 }
 
 @keyframes type{
@@ -807,7 +894,7 @@ body{
     .mobile-book .pages-book-div .paper .front{
         z-index: 1;
         backface-visibility: hidden;
-        border-left: 3px solid powderblue;
+        /* border-left: 3px solid powderblue; */
     }
 
     .mobile-book .pages-book-div .paper .back{
