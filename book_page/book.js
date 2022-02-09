@@ -412,12 +412,15 @@ const view_function = (event) =>{
     let index = parseInt(event.target.id)
     console.log(index)
     if(window.innerWidth <= 400 && window.innerHeight <= 700){
-
+        console.log("kyla")
         contents_dates[index].style.display = "block"
+        contents_body[index].style.display = "flex"
+
         view_btns[index].style.display = "none"
     }else{
         contents_dates[index].style.display = "block"
         contents_body[index].style.display = "flex"
+
         view_btns[index].style.display = "none"
     }
     
