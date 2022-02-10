@@ -410,7 +410,8 @@ open_book_btn.addEventListener('click', ()=> {
     FRONT 4 = 5
     BACK 4 = 6
     FRONT 5 = 7
-
+    BACK 5 = 8
+    
     MOBILE
     BACK 1 = 8
     FRONT 2 = 9
@@ -420,6 +421,8 @@ open_book_btn.addEventListener('click', ()=> {
     FRONT 4 = 13
     BACK 4 = 14
     FRONT 5 = 15
+    BACK 5 = 8
+
 */
 // BACK 1 CONTENTS
 const view_function = (event) =>{
@@ -439,9 +442,9 @@ const view_function = (event) =>{
     }
     
 }
-console.log("December 3, 2021".length)
+console.log("December 16, 2021".length)
 
-for(let i = 0; i < 16; i++){
+for(let i = 0; i < 18; i++){
     view_btns[i].addEventListener('click', view_function, false)
 }
 

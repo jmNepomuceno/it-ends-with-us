@@ -696,7 +696,46 @@
 
                     <div class="back" id="p5-back">
                         <div class="back-content" id="p5-back-content">
-                            <h1>Back 5</h1>
+
+                            <div class="contents-div" id="back_5_div_1">
+                                
+                                <a class="view_btn" id="8"> <span>VIEW</span> </a>
+
+                                <h1 class="contents-date" id="back_5_date_1" data-text="December 16, 2021">November 28, 2021</h1>
+                                
+                                <section>
+                                    <div class="container-rain">
+                                        <img src="../imgs/back_5_img1.jpg" alt="img">
+                                        <img src="../imgs/back_5_img2.jpg" alt="img">
+                                    </div> 
+                                    <script>
+                                        function rain(){
+                                            let amount = 100
+                                            let body = document.querySelector('.container-rain')
+                                            let i = 0;
+
+                                            while(i < amount){
+                                                let drop = document.createElement('i')
+
+                                                let size = Math.random() * 5;
+                                                let posX = Math.floor(Math.random() * window.innerWidth)
+                                                let delay = Math.random() * -20;
+                                                let duration = Math.random() * 5
+
+                                                drop.style.width = 0.2 + size + 'px'
+                                                drop.style.left = posX + 'px'
+                                                drop.style.animationDelay = delay + 's'
+                                                drop.style.animationDuration = 1 + duration + 's'
+                                                
+                                                body.appendChild(drop)
+                                                i++;
+                                            }
+                                        }
+                                        rain()
+                                    </script>
+                                </section>
+                            
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1076,7 +1115,45 @@
 
                     <div class="back" id="p5-back">
                         <div class="back-content" id="p5-back-content">
-                            <h1>Back 5</h1>
+                            <div class="contents-div" id="back_5_div_1">
+                                
+                                <a class="view_btn" id="17"> <span>VIEW</span> </a>
+
+                                <h1 class="contents-date" id="back_5_date_1" data-text="December 16, 2021">November 28, 2021</h1>
+                                
+                                <section>
+                                    <div class="container-rain-mobile">
+                                        <img src="../imgs/back_5_img1.jpg" alt="img">
+                                        <img src="../imgs/back_5_img2.jpg" alt="img">
+                                    </div> 
+                                    <script>
+                                        function rain(){
+                                            let amount = 50
+                                            let body = document.querySelector('.container-rain-mobile')
+                                            let i = 0;
+
+                                            while(i < amount){
+                                                let drop = document.createElement('i')
+
+                                                let size = Math.random() * 5;
+                                                let posX = Math.floor(Math.random() * window.innerWidth)
+                                                let delay = Math.random() * -20;
+                                                let duration = Math.random() * 5
+
+                                                drop.style.width = 0.2 + size + 'px'
+                                                drop.style.left = posX + 'px'
+                                                drop.style.animationDelay = delay + 's'
+                                                drop.style.animationDuration = 1 + duration + 's'
+                                                
+                                                body.appendChild(drop)
+                                                i++;
+                                            }
+                                        }
+                                        rain()
+                                    </script>
+                                </section>
+                            
+                            </div>
                         </div>
                     </div>
                 </div>
