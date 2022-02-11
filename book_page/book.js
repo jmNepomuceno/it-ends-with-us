@@ -22,6 +22,10 @@ let currentLocation = 1;
 let numOfPapers = 10;
 let max_location = numOfPapers + 1;
 
+page_6.addEventListener("click", ()=>{
+    console.log("adwsf")
+})
+
 // mobile book
 const pages_div_mobile = document.querySelector('.mobile-book')
 const prev_btn_mobile = document.querySelector(".mobile-book .prev-btn")
@@ -417,17 +421,17 @@ open_book_btn.addEventListener('click', ()=> {
     BACK 7 = 12
 
     MOBILE
-    BACK 1 = 8
-    FRONT 2 = 9
-    BACK 2 = 10
-    FRONT 3 = 11
-    BACK 3 = 12
-    FRONT 4 = 13
-    BACK 4 = 14
-    FRONT 5 = 15
-    BACK 5 = 8
-    FRONT 6 = 19
-    BACK 6 = 21
+    BACK 1 = 13
+    FRONT 2 = 14
+    BACK 2 = 15
+    FRONT 3 = 16
+    BACK 3 = 17
+    FRONT 4 = 18
+    BACK 4 = 19
+    FRONT 5 = 20
+    BACK 5 = 21
+    FRONT 6 = 22
+    BACK 6 = 23
     FRONT 7 = 24
     BACK 7 = 25
 
